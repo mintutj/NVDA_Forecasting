@@ -69,9 +69,9 @@ def plot_predictions(Y_hat_test,test_context):
     plt.figure()#figsize=(20, 6))
 
     # Plot the actual values
-    plt.plot(Y_hat_test['ds'], Y_hat_test['y'], label='True', color='blue')
-    plt.plot(Y_hat_test['ds'], Y_hat_test['Autoformer'], label='predicted', color='orange')
-    plt.plot(test_context['ds'], test_context['y'], label='Test Context', color='green', linestyle='--')
+    plt.plot(Y_hat_test['ds'], Y_hat_test['y'], label='True', color='green')
+    plt.plot(Y_hat_test['ds'], Y_hat_test['Autoformer'], label='predicted', color='red')
+    plt.plot(test_context['ds'].tail(12), test_context['y'].tail(12), label='Test Context', color='blue')#, linestyle='--')
 
     # Extract model names
     # model_names = [model.__class__.__name__ for model in models]
