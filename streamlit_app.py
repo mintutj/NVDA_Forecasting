@@ -108,9 +108,9 @@ def main():
         'SPY': {'csv': 'path_to_spy.csv', 'model': './models/checkpoints_spy'},
     }
         
-    st.title("Forecasting Pipeline with Streamlit")
+    st.title("Stock Market Forecasting")
 
-    ticker = st.selectbox("Select Ticker", options=list(ticker_to_paths.keys()))
+    ticker = st.selectbox("Select your Stock/Index", options=list(ticker_to_paths.keys()))
 
     cutoff_times = [
         "2024-08-14 11:00:00-04:00",
@@ -121,7 +121,7 @@ def main():
         "2024-08-14 16:00:00-04:00"
     ]
 
-    selected_cutoff = st.selectbox("Select Cutoff Time", options=cutoff_times)
+    selected_cutoff = st.selectbox("Select Prediction Time", options=cutoff_times)
 
     horizon = 12
     
