@@ -113,7 +113,7 @@ def main():
     ticker = st.selectbox("Select your Stock/Index", options=list(ticker_to_paths.keys()))
 
     cutoff_times = [
-        "2024-08-14 11:00:00-04:00",
+        #"2024-08-14 11:00:00-04:00",
         "2024-08-14 12:00:00-04:00",
         "2024-08-14 13:00:00-04:00",
         "2024-08-14 14:00:00-04:00",
